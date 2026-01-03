@@ -3,6 +3,39 @@ import { Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
+
+
+
+
+const services2 = [
+    {
+        title: "Regala Momentos",
+        subtitle: "",
+        description: "Regala joyas de oro y plata a tus seres queridos con un mensaje de amor, amor, amor y un toque especial de amor.",
+        badge: "Creaciones Exclusivas",
+        feature: "Diseño a medida",
+        subfeature: "Convierte tu visión en realidad"
+    },
+    {
+        title: "Servicio de Taller",
+        subtitle: "",
+        description: "Cuenta con nosotros para restaurar y reparar tus joyas de oro y plata con la delicadeza y precisión que merecen.",
+        badge: "Servicio Especializado",
+        feature: "Experiencia artesanal",
+        subfeature: "Más de 20 años restaurando belleza"
+    }
+    // ,
+
+    // {
+    //     title: "Restauración de Joyas",
+    //     subtitle: "Restauración",
+    //     description: "Devolvemos el esplendor original a tus joyas más preciadas mediante técnicas tradicionales de joyería.",
+    //     badge: "Cuidado Experto",
+    //     feature: "Restauración profesional",
+    //     subfeature: "Preservamos tu legado familiar"
+    // }
+];
+
 const services = [
     {
         title: "Somos fabricantes",
@@ -48,6 +81,7 @@ export function ServicesSection() {
     };
 
     const currentService = services[currentIndex];
+    const currentService2 = services2[currentIndex];
 
     return (
 
@@ -170,8 +204,8 @@ export function ServicesSection() {
                                     width={600}
                                     height={200}
                                     className="object-cover object-center"
-                                    
-                                    
+
+
                                 />
 
 
@@ -196,19 +230,19 @@ export function ServicesSection() {
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full border border-gray-200">
                                 <Sparkles className="w-4 h-4 text-gray-600" />
                                 <span className="text-sm font-medium text-gray-700 tracking-wide">
-                                    {currentService.badge}
+                                    {currentService2.badge}
                                 </span>
                             </div>
 
                             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
-                                {currentService.title}
+                                {currentService2.title}
                                 <span className="block font-serif italic text-gray-700 mt-2">
-                                    {currentService.subtitle}
+                                    {currentService2.subtitle}
                                 </span>
                             </h3>
 
                             <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                                {currentService.description}
+                                {currentService2.description}
                             </p>
 
                             <div className="flex items-center gap-4">
