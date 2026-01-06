@@ -24,16 +24,7 @@ const services2 = [
         feature: "Experiencia artesanal",
         subfeature: "Más de 20 años restaurando belleza"
     }
-    // ,
-
-    // {
-    //     title: "Restauración de Joyas",
-    //     subtitle: "Restauración",
-    //     description: "Devolvemos el esplendor original a tus joyas más preciadas mediante técnicas tradicionales de joyería.",
-    //     badge: "Cuidado Experto",
-    //     feature: "Restauración profesional",
-    //     subfeature: "Preservamos tu legado familiar"
-    // }
+ 
 ];
 
 const services = [
@@ -94,12 +85,7 @@ export function ServicesSection() {
 
                         {/* Contenido de texto */}
                         <div className="space-y-6 lg:space-y-8">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full border border-gray-200">
-                                <Sparkles className="w-4 h-4 text-gray-600" />
-                                <span className="text-sm font-medium text-gray-700 tracking-wide">
-                                    {currentService.badge}
-                                </span>
-                            </div>
+                          
 
                             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
                                 {currentService.title}
@@ -227,13 +213,7 @@ export function ServicesSection() {
 
                         {/* Contenido de texto */}
                         <div className="space-y-6 lg:space-y-8">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full border border-gray-200">
-                                <Sparkles className="w-4 h-4 text-gray-600" />
-                                <span className="text-sm font-medium text-gray-700 tracking-wide">
-                                    {currentService2.badge}
-                                </span>
-                            </div>
-
+                       
                             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
                                 {currentService2.title}
                                 <span className="block font-serif italic text-gray-700 mt-2">
