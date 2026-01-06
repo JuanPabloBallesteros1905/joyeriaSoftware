@@ -143,13 +143,12 @@ export function ServicesSection() {
 
                         {/* Elemento visual decorativo */}
                         <div className="relative h-64 sm:h-80 lg:h-96">
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-200/40 via-gray-100/30 to-transparent rounded-2xl transform rotate-3 transition-all duration-500"></div>
-                            <div className="absolute inset-0 bg-gradient-to-tl from-gray-300/30 via-gray-200/20 to-transparent rounded-2xl transform -rotate-3 transition-all duration-500"></div>
+                            
                             <div className="absolute inset-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-xl flex items-center justify-center transition-all duration-500">
                                 <div className="text-center space-y-4 p-8">
-                                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center shadow-lg">
+                                    {/* <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center shadow-lg">
                                         <Sparkles className="w-10 h-10 text-white" />
-                                    </div>
+                                    </div> */}
                                     <p className="text-gray-800 font-serif italic text-lg">
                                         {currentService.feature}
                                     </p>
@@ -173,40 +172,32 @@ export function ServicesSection() {
                 <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 sm:py-24 lg:py-32">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-
-                        <div className="relative h-64 sm:h-80 lg:h-96">
-
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-200/40 via-gray-100/30 to-transparent rounded-2xl transform rotate-3 transition-all duration-500"></div>
-
-                            <div className="absolute inset-0 bg-gradient-to-tl from-gray-300/30 via-gray-200/20 to-transparent rounded-2xl transform -rotate-3 transition-all duration-500">
-                            </div>
-
+                            <div className="relative h-64 sm:h-80 lg:h-96">
+                            
                             <div className="absolute inset-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-xl flex items-center justify-center transition-all duration-500">
-
-                                <Image
-                                    src="/caja_regalo.png"
-                                    alt="Caja de regalo"
-                                    width={600}
-                                    height={200}
-                                    className="object-cover object-center"
-
-
-                                />
-
-
-                                {/* <div className="text-center space-y-4 p-8">
-                                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center shadow-lg">
-                                        <Sparkles className="w-10 h-10 text-white" /> </div>
+                                <div className="text-center space-y-4 p-8">
+                                    {/* <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center shadow-lg">
+                                        <Sparkles className="w-10 h-10 text-white" />
+                                    </div> */}
                                     <p className="text-gray-800 font-serif italic text-lg">
                                         {currentService.feature}
                                     </p>
                                     <p className="text-sm text-gray-500">
                                         {currentService.subfeature}
                                     </p>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
+                        
+                   
+
+{/* <Image
+    src="/caja_regalo.png"
+    alt="Caja de regalo"
+    width={600} // El ancho base
+    height={400} // El alto proporcional
+    className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl border border-gray-200 shadow-xl"
+/> */}
 
 
 
@@ -268,7 +259,7 @@ export function ServicesSection() {
                             </div>
                         </div>
 
-                        {/* Elemento visual decorativo */}
+                        
 
                     </div>
                 </div>
