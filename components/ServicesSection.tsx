@@ -22,7 +22,6 @@ const services2 = [
         subfeature: "Resultados en 48 horas"
     }
 ];
-
 const services = [
     {
         title: "Atelier de Alta Joyería",
@@ -39,7 +38,7 @@ const services = [
         badge: "Tecnología Inmersiva",
         feature: "Realidad aumentada",
         subfeature: "Prueba virtual desde tu móvil"
-    }
+    } 
 ];
 
 export function ServicesSection() {
