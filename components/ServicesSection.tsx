@@ -1,47 +1,45 @@
 'use client'
 import { Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
- 
-import { useState } from 'react';
 
+import { useState } from 'react';
 
 
 const services2 = [
     {
-        title: "Regala Momentos",
-        subtitle: "Joyas con Sentimiento",
-        description: "Transformamos emociones en joyas atemporales. Cada pieza es creada para celebrar amores, amistades y logros especiales, con inscripciones personalizadas que eternizan tus mensajes más valiosos.",
-        badge: "Creaciones Exclusivas",
-        feature: "Personalización Total",
-        subfeature: "Grabados, iniciales y fechas memorables"
+        title: "Colecciones Limitadas",
+        subtitle: "Ediciones Especiales",
+        description: "Lanzamos series exclusivas de solo 50 piezas cada temporada. Joyas inspiradas en arte, arquitectura y naturaleza que se convierten en objetos de colección valorados año tras año.",
+        badge: "Serie 2024",
+        feature: "Numeradas y certificadas",
+        subfeature: "Aumentan su valor con el tiempo"
     },
     {
-        title: "Servicio de Taller",
-        subtitle: "Restauración Experta",
-        description: "Devolvemos el brillo y la belleza a tus piezas más queridas. Nuestros maestros joyeros trabajan con técnicas tradicionales y tecnología moderna para reparar, pulir y renovar cualquier joya de oro, plata o platino.",
-        badge: "Servicio Certificado",
-        feature: "Garantía de calidad",
-        subfeature: "Mismo esmero que en piezas nuevas"
+        title: "Laboratorio Gemológico",
+        subtitle: "Certificación de Piedras",
+        description: "Contamos con tecnología de espectroscopía para certificar diamantes, esmeraldas, rubíes y zafiros. Emitimos informes detallados de pureza, color, talla y quilates con validez internacional.",
+        badge: "Certificación GIA",
+        feature: "Equipos de última generación",
+        subfeature: "Resultados en 48 horas"
     }
 ];
 
 const services = [
     {
-        title: "Somos Fabricantes",
-        subtitle: "Diseño y Creación",
-        description: "Desde el boceto hasta la joya terminada, controlamos cada etapa del proceso. Utilizamos oro de 18k, plata ley 925 y piedras preciosas certificadas para crear piezas únicas que reflejan tu personalidad.",
-        badge: "Hecho a Mano",
-        feature: "Proceso artesanal",
-        subfeature: "100% personalizable según tus preferencias"
+        title: "Atelier de Alta Joyería",
+        subtitle: "Piezas Únicas",
+        description: "Nuestros maestros joyeros con más de 30 años de experiencia crean obras de arte en oro blanco, rosa y amarillo, combinando diamantes conflict-free con esmaltes artesanales.",
+        badge: "Obras Firmadas",
+        feature: "Técnicas del siglo XIX",
+        subfeature: "Cada pieza cuenta una historia única"
     },
     {
-        title: "Servicio de Taller",
-        subtitle: "Mantenimiento Profesional",
-        description: "Ofrecemos limpieza ultrasónica, engastado de piedras, cambio de cierres y remodelación completa. Nuestro taller cuenta con equipos de última generación para tratamientos precisos y duraderos.",
-        badge: "Técnicas Avanzadas",
-        feature: "Micro-soldadura láser",
-        subfeature: "Reparaciones invisibles y resistentes"
-    },
-
+        title: "Customización Digital",
+        subtitle: "Diseño 3D Interactivo",
+        description: "Usa nuestra plataforma online para diseñar tu propia joya. Visualiza en tiempo real combinaciones de metales, piedras y formas. Recibe un render fotorrealista antes de la fabricación.",
+        badge: "Tecnología Inmersiva",
+        feature: "Realidad aumentada",
+        subfeature: "Prueba virtual desde tu móvil"
+    }
 ];
 
 export function ServicesSection() {
