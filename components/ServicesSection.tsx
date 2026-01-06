@@ -1,63 +1,52 @@
 'use client'
 import { Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
+ 
 import { useState } from 'react';
-
-
 
 
 
 const services2 = [
     {
         title: "Regala Momentos",
-        subtitle: "",
-        description: "Regala joyas de oro y plata a tus seres queridos con un mensaje de amor, amor, amor y un toque especial de amor.",
+        subtitle: "Joyas con Sentimiento",
+        description: "Transformamos emociones en joyas atemporales. Cada pieza es creada para celebrar amores, amistades y logros especiales, con inscripciones personalizadas que eternizan tus mensajes más valiosos.",
         badge: "Creaciones Exclusivas",
-        feature: "Diseño a medida",
-        subfeature: "Convierte tu visión en realidad"
+        feature: "Personalización Total",
+        subfeature: "Grabados, iniciales y fechas memorables"
     },
     {
         title: "Servicio de Taller",
-        subtitle: "",
-        description: "Cuenta con nosotros para restaurar y reparar tus joyas de oro y plata con la delicadeza y precisión que merecen.",
-        badge: "Servicio Especializado",
-        feature: "Experiencia artesanal",
-        subfeature: "Más de 20 años restaurando belleza"
+        subtitle: "Restauración Experta",
+        description: "Devolvemos el brillo y la belleza a tus piezas más queridas. Nuestros maestros joyeros trabajan con técnicas tradicionales y tecnología moderna para reparar, pulir y renovar cualquier joya de oro, plata o platino.",
+        badge: "Servicio Certificado",
+        feature: "Garantía de calidad",
+        subfeature: "Mismo esmero que en piezas nuevas"
     }
- 
 ];
 
 const services = [
     {
-        title: "Somos fabricantes",
-        subtitle: "",
-        description: "Creamos piezas únicas adaptadas a tu estilo. Cada joya es diseñada exclusivamente para ti con atención al detalle.",
-        badge: "Creaciones Exclusivas",
-        feature: "Diseño a medida",
-        subfeature: "Convierte tu visión en realidad"
+        title: "Somos Fabricantes",
+        subtitle: "Diseño y Creación",
+        description: "Desde el boceto hasta la joya terminada, controlamos cada etapa del proceso. Utilizamos oro de 18k, plata ley 925 y piedras preciosas certificadas para crear piezas únicas que reflejan tu personalidad.",
+        badge: "Hecho a Mano",
+        feature: "Proceso artesanal",
+        subfeature: "100% personalizable según tus preferencias"
     },
     {
         title: "Servicio de Taller",
-        subtitle: "",
-        description: "Cuenta con nosotros para restaurar y reparar tus joyas de oro y plata con la delicadeza y precisión que merecen.",
-        badge: "Servicio Especializado",
-        feature: "Experiencia artesanal",
-        subfeature: "Más de 20 años restaurando belleza"
-    }
-    // ,
+        subtitle: "Mantenimiento Profesional",
+        description: "Ofrecemos limpieza ultrasónica, engastado de piedras, cambio de cierres y remodelación completa. Nuestro taller cuenta con equipos de última generación para tratamientos precisos y duraderos.",
+        badge: "Técnicas Avanzadas",
+        feature: "Micro-soldadura láser",
+        subfeature: "Reparaciones invisibles y resistentes"
+    },
 
-    // {
-    //     title: "Restauración de Joyas",
-    //     subtitle: "Restauración",
-    //     description: "Devolvemos el esplendor original a tus joyas más preciadas mediante técnicas tradicionales de joyería.",
-    //     badge: "Cuidado Experto",
-    //     feature: "Restauración profesional",
-    //     subfeature: "Preservamos tu legado familiar"
-    // }
 ];
 
 export function ServicesSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex2, setCurrentIndex2] = useState(0);
 
     const goToPrevious = () => {
         setCurrentIndex((prevIndex) =>
@@ -71,8 +60,21 @@ export function ServicesSection() {
         );
     };
 
+
+    const goToPrevious2 = () => {
+        setCurrentIndex2((prevIndex) =>
+            prevIndex === 0 ? services2.length - 1 : prevIndex - 1
+        );
+    };
+
+    const goToNext2 = () => {
+        setCurrentIndex2((prevIndex) =>
+            prevIndex === services2.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
     const currentService = services[currentIndex];
-    const currentService2 = services2[currentIndex];
+    const currentService2 = services2[currentIndex2];
 
     return (
 
@@ -85,7 +87,7 @@ export function ServicesSection() {
 
                         {/* Contenido de texto */}
                         <div className="space-y-6 lg:space-y-8">
-                          
+
 
                             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
                                 {currentService.title}
@@ -143,7 +145,7 @@ export function ServicesSection() {
 
                         {/* Elemento visual decorativo */}
                         <div className="relative h-64 sm:h-80 lg:h-96">
-                            
+
                             <div className="absolute inset-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-xl flex items-center justify-center transition-all duration-500">
                                 <div className="text-center space-y-4 p-8">
                                     {/* <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center shadow-lg">
@@ -172,26 +174,26 @@ export function ServicesSection() {
                 <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 sm:py-24 lg:py-32">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                            <div className="relative h-64 sm:h-80 lg:h-96">
-                            
+                        <div className="relative h-64 sm:h-80 lg:h-96">
+
                             <div className="absolute inset-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-xl flex items-center justify-center transition-all duration-500">
                                 <div className="text-center space-y-4 p-8">
                                     {/* <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center shadow-lg">
                                         <Sparkles className="w-10 h-10 text-white" />
                                     </div> */}
                                     <p className="text-gray-800 font-serif italic text-lg">
-                                        {currentService.feature}
+                                        {currentService2.feature}
                                     </p>
                                     <p className="text-sm text-gray-500">
-                                        {currentService.subfeature}
+                                        {currentService2.subfeature}
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        
-                   
 
-{/* <Image
+
+
+                        {/* <Image
     src="/caja_regalo.png"
     alt="Caja de regalo"
     width={600} // El ancho base
@@ -204,7 +206,7 @@ export function ServicesSection() {
 
                         {/* Contenido de texto */}
                         <div className="space-y-6 lg:space-y-8">
-                       
+
                             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
                                 {currentService2.title}
                                 <span className="block font-serif italic text-gray-700 mt-2">
@@ -227,14 +229,14 @@ export function ServicesSection() {
                                 {/* Controles del carrusel */}
                                 <div className="flex gap-2">
                                     <button
-                                        onClick={goToPrevious}
+                                        onClick={goToPrevious2}
                                         className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-200"
                                         aria-label="Servicio anterior"
                                     >
                                         <ChevronLeft className="w-5 h-5 text-gray-600" />
                                     </button>
                                     <button
-                                        onClick={goToNext}
+                                        onClick={goToNext2}
                                         className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-200"
                                         aria-label="Siguiente servicio"
                                     >
@@ -245,10 +247,10 @@ export function ServicesSection() {
 
                             {/* Indicadores */}
                             <div className="flex gap-2 pt-4">
-                                {services.map((_, index) => (
+                                {services2.map((_, index) => (
                                     <button
                                         key={index}
-                                        onClick={() => setCurrentIndex(index)}
+                                        onClick={() => setCurrentIndex2(index)}
                                         className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex
                                             ? 'w-8 bg-gray-900'
                                             : 'w-1.5 bg-gray-300 hover:bg-gray-400'
@@ -259,7 +261,7 @@ export function ServicesSection() {
                             </div>
                         </div>
 
-                        
+
 
                     </div>
                 </div>
