@@ -4,7 +4,7 @@ import Link from "next/link"
 export function HeroSectionJoyeria() {
   return (
     <section className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] xl:h-[900px] w-full overflow-hidden flex items-center justify-center">
-      
+
       {/* Fondo con imagen */}
       <div className="absolute inset-0 z-0">
         {/* <Image
@@ -17,7 +17,7 @@ export function HeroSectionJoyeria() {
           sizes="100vw"
         /> */}
         {/* Overlay oscuro para mejor legibilidad */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />  
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
       </div>
 
       {/* Contenido principal */}
@@ -34,36 +34,36 @@ export function HeroSectionJoyeria() {
         </div>
 
         {/* Botón CTA */}
-        <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-16 px-4">
+        {/* <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-16 px-4">
           <Link href="/catalogo" className="bg-white text-black px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-xs sm:text-sm font-medium tracking-widest uppercase hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 rounded-sm min-w-[180px] sm:min-w-[200px]">
             Ver Catálogo
           </Link >
-        </div>
+        </div> */}
 
         {/* Estadísticas */}
         <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 border-t border-white/20 pt-6 sm:pt-8 md:pt-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl px-4">
-          
+
           <div className="flex flex-col items-center">
             <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light">100%</span>
             <span className="text-[9px] xs:text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-1 sm:mt-2 text-gray-300 text-center leading-tight">
               Artesanal
             </span>
           </div>
-          
+
           <div className="flex flex-col items-center">
             <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light">30</span>
             <span className="text-[9px] xs:text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-1 sm:mt-2 text-gray-300 text-center leading-tight">
               Años de Historia
             </span>
           </div>
-          
+
           <div className="flex flex-col items-center">
             <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light">18k</span>
             <span className="text-[9px] xs:text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-1 sm:mt-2 text-gray-300 text-center leading-tight">
               Oro
             </span>
           </div>
-          
+
         </div>
 
       </div>

@@ -19,7 +19,7 @@ export default function Home() {
 
       <NavbarJoye />
       <HeroSectionJoyeria />
-      {/* <ProductsCategories /> */}
+      
       <ServicesSection />
       <Banner />
       <Footer />
@@ -29,7 +29,7 @@ export default function Home() {
 
 
 
-      {/* <div className="h-200"></div> */}
+      
 
 
 

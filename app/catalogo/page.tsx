@@ -16,14 +16,18 @@ export default function Catalgo() {
 
 
 
+
+
 const JewelryCatalog = () => {
+
+  
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedMaterial, setSelectedMaterial] = useState('all');
   const [priceRange, setPriceRange] = useState([0, 5000]);
   const [searchTerm, setSearchTerm] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
-  // Data de ejemplo con imágenes de Unsplash
+  
   const products = [
     {
       id: 1,
