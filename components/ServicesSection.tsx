@@ -1,5 +1,7 @@
 'use client'
-import { Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+import Image from 'next/image';
 
 import { useState } from 'react';
 
@@ -22,23 +24,25 @@ const services2 = [
         subfeature: "Resultados en 48 horas"
     }
 ];
+
+
 const services = [
     {
-        title: "Atelier de Alta Joyería",
-        subtitle: "Piezas Únicas",
-        description: "Nuestros maestros joyeros con más de 30 años de experiencia crean obras de arte en oro blanco, rosa y amarillo, combinando diamantes conflict-free con esmaltes artesanales.",
-        badge: "Obras Firmadas",
+        title: "Taller de Alta Joyería",
+        subtitle: "Piezas Únicas & Personalizadas",
+        description: "Con más de 30 años de experiencia, creamos obras de arte en oro blanco, rosa y amarillo, siempre bajo la máxima calidad, ley 750!",
+        badge: "Hecho a mano",
         feature: "Técnicas del siglo XIX",
         subfeature: "Cada pieza cuenta una historia única"
     },
     {
-        title: "Customización Digital",
-        subtitle: "Diseño 3D Interactivo",
-        description: "Usa nuestra plataforma online para diseñar tu propia joya. Visualiza en tiempo real combinaciones de metales, piedras y formas. Recibe un render fotorrealista antes de la fabricación.",
+        title: "Grabamos con laser tus prendas",
+        subtitle: "Diseño & Previsualización digital",
+        description: "Grabar con láser es convertir una joya en un recuerdo eterno. Cada anillo o prenda en oro puede llevar un nombre, una fecha o un mensaje especial con máxima precisión, sin dañar el metal, preservando su brillo y valor para siempre.",
         badge: "Tecnología Inmersiva",
         feature: "Realidad aumentada",
         subfeature: "Prueba virtual desde tu móvil"
-    } 
+    }
 ];
 
 export function ServicesSection() {
@@ -142,21 +146,15 @@ export function ServicesSection() {
 
                         {/* Elemento visual decorativo */}
                         <div className="relative h-64 sm:h-80 lg:h-96">
-
-                            <div className="absolute inset-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-xl flex items-center justify-center transition-all duration-500">
-                                <div className="text-center space-y-4 p-8">
-                                    {/* <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center shadow-lg">
-                                        <Sparkles className="w-10 h-10 text-white" />
-                                    </div> */}
-                                    <p className="text-gray-800 font-serif italic text-lg">
-                                        {currentService.feature}
-                                    </p>
-                                    <p className="text-sm text-gray-500">
-                                        {currentService.subfeature}
-                                    </p>
-                                </div>
-                            </div>
+                            <Image
+                                src="/joyeria.png"
+                                alt="Caja de regalo"
+                                width={600}
+                                height={200}
+                                className="w-full h-full sm:h-full lg:h-full object-cover object-center rounded-2xl border border-gray-200 shadow-xl"
+                            />
                         </div>
+
 
                     </div>
                 </div>
@@ -174,29 +172,19 @@ export function ServicesSection() {
                         <div className="relative h-64 sm:h-80 lg:h-96">
 
                             <div className="absolute inset-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-xl flex items-center justify-center transition-all duration-500">
-                                <div className="text-center space-y-4 p-8">
-                                    {/* <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center shadow-lg">
-                                        <Sparkles className="w-10 h-10 text-white" />
-                                    </div> */}
-                                    <p className="text-gray-800 font-serif italic text-lg">
-                                        {currentService2.feature}
-                                    </p>
-                                    <p className="text-sm text-gray-500">
-                                        {currentService2.subfeature}
-                                    </p>
-                                </div>
+                                {/* <Image
+                                        src="/joyeria.jpeg"
+                                        alt="Caja de regalo"
+                                        width={600} // El ancho base
+                                        height={400} // El alto proporcional
+                                        className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl border border-gray-200 shadow-xl"
+                                    /> */}
+
                             </div>
                         </div>
 
 
 
-                        {/* <Image
-    src="/caja_regalo.png"
-    alt="Caja de regalo"
-    width={600} // El ancho base
-    height={400} // El alto proporcional
-    className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl border border-gray-200 shadow-xl"
-/> */}
 
 
 
