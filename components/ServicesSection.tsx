@@ -7,18 +7,19 @@ import { useState } from 'react';
 
 
 const services2 = [
+    // {
+    //     title: "Colecciones Limitadas",
+    //     subtitle: "Ediciones Especiales",
+    //     description: "Lanzamos series exclusivas de solo 50 piezas cada temporada. Joyas inspiradas en arte, arquitectura y naturaleza que se convierten en objetos de colección valorados año tras año.",
+    //     badge: "Serie 2024",
+    //     feature: "Numeradas y certificadas",
+    //     subfeature: "Aumentan su valor con el tiempo"
+    // },
     {
-        title: "Colecciones Limitadas",
-        subtitle: "Ediciones Especiales",
-        description: "Lanzamos series exclusivas de solo 50 piezas cada temporada. Joyas inspiradas en arte, arquitectura y naturaleza que se convierten en objetos de colección valorados año tras año.",
-        badge: "Serie 2024",
-        feature: "Numeradas y certificadas",
-        subfeature: "Aumentan su valor con el tiempo"
-    },
-    {
-        title: "Laboratorio Gemológico",
-        subtitle: "Certificación de Piedras",
-        description: "Contamos con tecnología de espectroscopía para certificar diamantes, esmeraldas, rubíes y zafiros. Emitimos informes detallados de pureza, color, talla y quilates con validez internacional.",
+        title: "Trabajamos con piedras naturales ",
+        subtitle: "Certificadas por laboratorio gemológico ",
+        imagen: "/gemas.png",
+        description: "Creamos tus joyas con diamantes, esmeraldas, rubíes y zafiros, bajo fabricación personalizada. Emitimos certificado expedido por laboratorio, detallando pureza, color, talla y quilates de las piedras, con validez internacional.",
         badge: "Certificación GIA",
         feature: "Equipos de última generación",
         subfeature: "Resultados en 48 horas"
@@ -86,22 +87,27 @@ export function ServicesSection() {
 
             <section className="relative w-full overflow-hidden bg-gradient-to-br from-gray-50 via-white to-slate-50">
                 <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 sm:py-24 lg:py-32">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
 
-                        {/* Contenido de texto */}
-                        <div className="space-y-6 lg:space-y-8">
+                        {/* Contenido de texto con altura mínima fija */}
+                        <div className="flex flex-col justify-center space-y-6 lg:space-y-8">
 
+                            {/* Título y subtítulo con altura mínima fija */}
+                            <div className="min-h-[140px] sm:min-h-[160px] lg:min-h-[180px]">
+                                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
+                                    {currentService.title}
+                                    <span className="block font-serif italic text-gray-700 mt-2">
+                                        {currentService.subtitle}
+                                    </span>
+                                </h3>
+                            </div>
 
-                            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
-                                {currentService.title}
-                                <span className="block font-serif italic text-gray-700 mt-2">
-                                    {currentService.subtitle}
-                                </span>
-                            </h3>
-
-                            <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                                {currentService.description}
-                            </p>
+                            {/* Descripción con altura mínima fija */}
+                            <div className="min-h-[100px] sm:min-h-[120px]">
+                                <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
+                                    {currentService.description}
+                                </p>
+                            </div>
 
                             <div className="flex items-center gap-4">
                                 <button className="group px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-md transition-all duration-300 shadow-sm hover:shadow-md">
@@ -137,8 +143,8 @@ export function ServicesSection() {
                                         key={index}
                                         onClick={() => setCurrentIndex(index)}
                                         className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex
-                                            ? 'w-8 bg-gray-900'
-                                            : 'w-1.5 bg-gray-300 hover:bg-gray-400'
+                                                ? 'w-8 bg-gray-900'
+                                                : 'w-1.5 bg-gray-300 hover:bg-gray-400'
                                             }`}
                                         aria-label={`Ir al servicio ${index + 1}`}
                                     />
@@ -146,17 +152,14 @@ export function ServicesSection() {
                             </div>
                         </div>
 
-                        {/* Elemento visual decorativo */}
-                        <div className="relative h-64 sm:h-80 lg:h-96">
-                            <Image
+                        {/* Elemento visual que ocupa todo el alto disponible */}
+                        <div className="relative h-full min-h-[400px] lg:min-h-[500px]">
+                            <img
                                 src={currentService.imagen}
-                                alt="Caja de regalo"
-                                width={600}
-                                height={200}
-                                className="w-full h-full sm:h-full lg:h-full object-cover object-center rounded-2xl border border-gray-200 shadow-xl"
+                                alt={currentService.title}
+                                className="w-full h-full object-cover object-center rounded-2xl border border-gray-200 shadow-xl"
                             />
                         </div>
-
 
                     </div>
                 </div>
@@ -166,44 +169,39 @@ export function ServicesSection() {
                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-200/20 rounded-full blur-3xl -z-10"></div>
             </section>
 
-
-            <section className="relative w-full overflow-hidden bg-gradient-to-br from-gray-50 via-white to-slate-50">
+<section className="relative w-full overflow-hidden bg-gradient-to-br from-gray-50 via-white to-slate-50">
                 <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 sm:py-24 lg:py-32">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                        <div className="relative h-64 sm:h-80 lg:h-96">
-
-                            <div className="absolute inset-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-xl flex items-center justify-center transition-all duration-500">
-                                {/* <Image
-                                        src="/joyeria.jpeg"
-                                        alt="Caja de regalo"
-                                        width={600} // El ancho base
-                                        height={400} // El alto proporcional
-                                        className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl border border-gray-200 shadow-xl"
-                                    /> */}
-
-                            </div>
+                         <div className="relative h-full min-h-[400px] lg:min-h-[500px]">
+                            <img
+                                src={currentService2.imagen}
+                                alt={currentService2.title}
+                                className="w-full h-full object-cover object-center rounded-2xl border border-gray-200 shadow-xl"
+                            />
                         </div>
 
+                        {/* Contenido de texto con altura mínima fija */}
+                        <div className="flex flex-col justify-center space-y-6 lg:space-y-8">
 
+                            
 
+                            {/* Título y subtítulo con altura mínima fija */}
+                            <div className="min-h-[140px] sm:min-h-[160px] lg:min-h-[180px]">
+                                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
+                                    {currentService2.title}
+                                    <span className="block font-serif italic text-gray-700 mt-2">
+                                        {currentService2.subtitle}
+                                    </span>
+                                </h3>
+                            </div>
 
-
-
-
-                        {/* Contenido de texto */}
-                        <div className="space-y-6 lg:space-y-8">
-
-                            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
-                                {currentService2.title}
-                                <span className="block font-serif italic text-gray-700 mt-2">
-                                    {currentService2.subtitle}
-                                </span>
-                            </h3>
-
-                            <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                                {currentService2.description}
-                            </p>
+                            {/* Descripción con altura mínima fija */}
+                            <div className="min-h-[100px] sm:min-h-[120px]">
+                                <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
+                                    {currentService2.description}
+                                </p>
+                            </div>
 
                             <div className="flex items-center gap-4">
                                 <button className="group px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-md transition-all duration-300 shadow-sm hover:shadow-md">
@@ -237,10 +235,10 @@ export function ServicesSection() {
                                 {services2.map((_, index) => (
                                     <button
                                         key={index}
-                                        onClick={() => setCurrentIndex2(index)}
+                                        onClick={() => setCurrentIndex(index)}
                                         className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex
-                                            ? 'w-8 bg-gray-900'
-                                            : 'w-1.5 bg-gray-300 hover:bg-gray-400'
+                                                ? 'w-8 bg-gray-900'
+                                                : 'w-1.5 bg-gray-300 hover:bg-gray-400'
                                             }`}
                                         aria-label={`Ir al servicio ${index + 1}`}
                                     />
@@ -248,7 +246,8 @@ export function ServicesSection() {
                             </div>
                         </div>
 
-
+                        {/* Elemento visual que ocupa todo el alto disponible */}
+                       
 
                     </div>
                 </div>
