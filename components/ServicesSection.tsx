@@ -29,6 +29,7 @@ const services2 = [
 const services = [
     {
         title: "Taller de Alta Joyería",
+        imagen: "/joyeria.png",
         subtitle: "Piezas Únicas & Personalizadas",
         description: "Con más de 30 años de experiencia, creamos obras de arte en oro blanco, rosa y amarillo, siempre bajo la máxima calidad, ley 750!",
         badge: "Hecho a mano",
@@ -36,7 +37,8 @@ const services = [
         subfeature: "Cada pieza cuenta una historia única"
     },
     {
-        title: "Grabamos con laser tus prendas",
+        title: "Grabamos con laser",
+        imagen: "/maarcador.png",
         subtitle: "Diseño & Previsualización digital",
         description: "Grabar con láser es convertir una joya en un recuerdo eterno. Cada anillo o prenda en oro puede llevar un nombre, una fecha o un mensaje especial con máxima precisión, sin dañar el metal, preservando su brillo y valor para siempre.",
         badge: "Tecnología Inmersiva",
@@ -147,7 +149,7 @@ export function ServicesSection() {
                         {/* Elemento visual decorativo */}
                         <div className="relative h-64 sm:h-80 lg:h-96">
                             <Image
-                                src="/joyeria.png"
+                                src={currentService.imagen}
                                 alt="Caja de regalo"
                                 width={600}
                                 height={200}
