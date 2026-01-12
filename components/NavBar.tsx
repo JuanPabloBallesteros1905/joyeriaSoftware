@@ -41,7 +41,7 @@ export function NavbarJoye() {
                     {/* Right section - Instagram and Menu */}
                     <div className="flex items-center gap-3 sm:gap-4 order-3">
                         <Link 
-                            href="https://instagram.com" 
+                            href="https://www.instagram.com/joyeria.italiana98/?utm_source=qr" 
                             target="_blank"
                             className="p-2 rounded-full hover:bg-amber-50 transition-colors duration-200 group"
                             aria-label="Instagram"
