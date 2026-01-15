@@ -3,7 +3,7 @@
 
 import { HeroSectionJoyeria } from "@/components/Hero";
 import { NavbarJoye } from "@/components/NavBar";
-import { ProductsCategories } from "@/components/ProductsCategories";
+
 import { ServicesSection } from "@/components/ServicesSection";
 import { Footer } from "@/components/Footer";
 
