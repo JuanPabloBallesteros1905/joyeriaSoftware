@@ -13,7 +13,7 @@ export function Footer() {
 
             <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-                    
+
                     {/* Columna 1: Sobre nosotros */}
                     <div className="space-y-4">
                         <h4 className="text-xl font-serif italic text-gray-100">
@@ -66,19 +66,19 @@ export function Footer() {
                             <li className="flex items-start gap-3">
                                 <Phone className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
                                 <span className="text-gray-400 text-sm">
-                                    +57 123 456 7890
+                                    +57 350 447 0305
                                 </span>
                             </li>
-                            <li className="flex items-start gap-3">
+                            {/* <li className="flex items-start gap-3">
                                 <Mail className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
                                 <span className="text-gray-400 text-sm">
                                     contacto@joyeria.com
                                 </span>
-                            </li>
+                            </li> */}
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
                                 <span className="text-gray-400 text-sm">
-                                    Santa Marta, Colombia
+                                    Ciénaga Magdalena, Colombia
                                 </span>
                             </li>
                         </ul>
@@ -93,22 +93,22 @@ export function Footer() {
                             Mantente al día con nuestras últimas creaciones
                         </p>
                         <div className="flex gap-3 pt-2">
-                            <a 
-                                href="#" 
+                            <a
+                                href="https://www.instagram.com/joyeria.italiana98/?utm_source=qr"
                                 className="p-2.5 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors duration-200"
                                 aria-label="Instagram"
                             >
                                 <Instagram className="w-5 h-5 text-gray-300" />
                             </a>
-                            <a 
-                                href="#" 
+                            <a
+                                href="#"
                                 className="p-2.5 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors duration-200"
                                 aria-label="Facebook"
                             >
                                 <Facebook className="w-5 h-5 text-gray-300" />
                             </a>
-                            <a 
-                                href="#" 
+                            <a
+                                href="#"
                                 className="p-2.5 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors duration-200"
                                 aria-label="Email"
                             >
@@ -123,7 +123,7 @@ export function Footer() {
                 <div className="border-t border-gray-700 mt-12 pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-gray-400 text-sm text-center md:text-left">
-                            © 2024 Joyería. Todos los derechos reservados.
+                            © 2026 Joyería. Todos los derechos reservados.
                         </p>
                         <div className="flex gap-6 text-sm">
                             <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
