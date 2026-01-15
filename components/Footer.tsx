@@ -3,6 +3,7 @@
 
 
 import { Heart, Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import Link from 'next/link';
 
 export function Footer() {
     return (
@@ -65,9 +66,9 @@ export function Footer() {
                         <ul className="space-y-3">
                             <li className="flex items-start gap-3">
                                 <Phone className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
-                                <span className="text-gray-400 text-sm">
+                                <Link href={"https://wa.me/573504470305?text=Hola!%20Estoy%20interesado%20en%20comprar%20oro%20con%20ustedes"} className="text-gray-400 text-sm">
                                     +57 350 447 0305
-                                </span>
+                                </Link>
                             </li>
                             {/* <li className="flex items-start gap-3">
                                 <Mail className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
