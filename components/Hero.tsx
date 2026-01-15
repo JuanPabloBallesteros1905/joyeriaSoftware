@@ -33,7 +33,7 @@ export function HeroSectionJoyeria() {
           </p>
         </div>
 
-        {/* Botón CTA */}
+        {/* Botón CTA */} 
         {/* <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-16 px-4">
           <Link href="/catalogo" className="bg-white text-black px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-xs sm:text-sm font-medium tracking-widest uppercase hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 rounded-sm min-w-[180px] sm:min-w-[200px]">
             Ver Catálogo
