@@ -6,12 +6,21 @@ import { useState } from "react";
 export function NavbarJoye() {
     const [isOpen, setIsOpen] = useState(false)
 
+
+    
     const itemsNav = [
-        { "label": "Planes", "href": "/joyeria" },
-        { "label": "Clientes", "href": "/joyefrisa" },
-        { "label": "Tienda", "href": "/joyeaisa" },
-        { "label": "Categorias", "href": "/joyseria" },
+        { "label": "", "href": "/joyeria" },
+        
     ]
+
+    // const itemsNav = [
+    //     { "label": "Planes", "href": "/joyeria" },
+    //     { "label": "Clientes", "href": "/joyefrisa" },
+    //     { "label": "Tienda", "href": "/joyeaisa" },
+    //     { "label": "Categorias", "href": "/joyseria" },
+    // ]
+
+
 
     return (
         <nav className="fixed top-0 z-50 w-full bg-white/95 text-gray-800 backdrop-blur-md shadow-md border-b border-gray-100">

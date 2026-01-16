@@ -1,8 +1,8 @@
 
+'use client'
 
 
-
-export function Banner() {
+export function PlansSection() {
 
 
 
@@ -23,7 +23,7 @@ export function Banner() {
 
 
 
-    return <div className="">
+    return <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         <h3 className="pl-10 pt-10 text-lg sm:text-xl md:text-2xl font-semibold text-[#28241e]  sm:mb-6 md:mb-8">Nuestros planes</h3>
 
@@ -35,7 +35,14 @@ export function Banner() {
 
 
 
+
+
         </div>
+
+
+        
+            <InstagramWidgetSimple />
+        
 
 
 
@@ -45,6 +52,112 @@ export function Banner() {
 
     </div>
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// En tu componente
+// components/InstagramWidgetSimple.jsx
+
+
+import { useEffect, useState } from 'react';
+
+declare global {
+    interface Window {
+        iFrameResize?: (options: unknown, selector: string) => void;
+    }
+}
+
+export default function InstagramWidgetSimple() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js';
+        script.async = true;
+        script.onload = () => {
+            if (window.iFrameResize) {
+                window.iFrameResize({}, '#instagram-iframe');
+            }
+        };
+        document.body.appendChild(script);
+    }, []);
+
+    return (
+        <section className="py-12 px-4 bg-gradient-to-b from-white to-gray-50">
+            <div className="max-w-6xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-10">
+
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                        Síguenos en <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">Instagram</span>
+                    </h2>
+                    <p className="text-gray-600 max-w-2xl mx-auto">
+                        Descubre nuestras colecciones exclusivas y el detrás de escena de la joyería fina italiana
+                    </p>
+                </div>
+
+                {/* Widget Container */}
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                    {/* Widget Header */}
+                    <div className="p-6 border-b border-gray-100">
+                        <div className="flex items-center justify-between">
+                        
+                            
+                        </div>
+                    </div>
+
+                    {/* Iframe */}
+                    <div className="relative min-h-[500px]">
+                        {isLoading && (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="text-center">
+                                    <div className="w-12 h-12 border-4 border-purple-200 border-t-purple-500 rounded-full animate-spin mx-auto mb-4"></div>
+                                    <p className="text-gray-600">Cargando feed...</p>
+                                </div>
+                            </div>
+                        )}
+
+                        <iframe
+                            id="instagram-iframe"
+                            src="https://b25ed91168ed4e58a207b769c8d84cc2.elf.site"
+                            onLoad={() => setIsLoading(false)}
+                            style={{
+                                border: 'none',
+                                width: '100%',
+                                minHeight: '500px',
+                                opacity: isLoading ? 0 : 1,
+                                transition: 'opacity 0.3s'
+                            }}
+                            title="Instagram"
+                        />
+                    </div>
+
+                    {/* Footer */}
+                   
+                </div>
+
+                {/* CTA */}
+               
+            </div>
+        </section>
+    );
 }
 
 

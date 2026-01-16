@@ -85,8 +85,8 @@ export function ServicesSection() {
 
         <>
 
-            <section className="relative w-full overflow-hidden bg-gradient-to-br from-gray-50 via-white to-slate-50">
-                <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 sm:py-24 lg:py-32">
+            <section className="relative w-full overflow-hidden bg-white">
+                <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-19 sm:py-24 lg:py-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
 
                         {/* Contenido de texto con altura mínima fija */}
@@ -143,8 +143,8 @@ export function ServicesSection() {
                                         key={index}
                                         onClick={() => setCurrentIndex(index)}
                                         className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex
-                                                ? 'w-8 bg-gray-900'
-                                                : 'w-1.5 bg-gray-300 hover:bg-gray-400'
+                                            ? 'w-8 bg-gray-900'
+                                            : 'w-1.5 bg-gray-300 hover:bg-gray-400'
                                             }`}
                                         aria-label={`Ir al servicio ${index + 1}`}
                                     />
@@ -169,11 +169,11 @@ export function ServicesSection() {
                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-200/20 rounded-full blur-3xl -z-10"></div>
             </section>
 
-<section className="relative w-full overflow-hidden bg-gradient-to-br from-gray-50 via-white to-slate-50">
+            <section className="relative w-full overflow-hidden bg-white">
                 <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 sm:py-24 lg:py-32">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
 
-                         <div className="relative h-full min-h-[400px] lg:min-h-[500px]">
+                        <div className="relative h-full min-h-[400px] lg:min-h-[500px]">
                             <img
                                 src={currentService2.imagen}
                                 alt={currentService2.title}
@@ -184,7 +184,7 @@ export function ServicesSection() {
                         {/* Contenido de texto con altura mínima fija */}
                         <div className="flex flex-col justify-center space-y-6 lg:space-y-8">
 
-                            
+
 
                             {/* Título y subtítulo con altura mínima fija */}
                             <div className="min-h-[140px] sm:min-h-[160px] lg:min-h-[180px]">
@@ -204,16 +204,16 @@ export function ServicesSection() {
                             </div>
 
                             <div className="flex items-center gap-4">
-                                <button className="group px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-md transition-all duration-300 shadow-sm hover:shadow-md">
+                                {/* <button className="group px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-md transition-all duration-300 shadow-sm hover:shadow-md">
                                     Solicitar servicio
                                     <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">
                                         →
                                     </span>
-                                </button>
+                                </button> */}
 
                                 {/* Controles del carrusel */}
                                 <div className="flex gap-2">
-                                    <button
+                                    {/* <button
                                         onClick={goToPrevious2}
                                         className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-200"
                                         aria-label="Servicio anterior"
@@ -226,28 +226,28 @@ export function ServicesSection() {
                                         aria-label="Siguiente servicio"
                                     >
                                         <ChevronRight className="w-5 h-5 text-gray-600" />
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
 
                             {/* Indicadores */}
-                            <div className="flex gap-2 pt-4">
+                            {/* <div className="flex gap-2 pt-4">
                                 {services2.map((_, index) => (
                                     <button
                                         key={index}
                                         onClick={() => setCurrentIndex(index)}
                                         className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex
-                                                ? 'w-8 bg-gray-900'
-                                                : 'w-1.5 bg-gray-300 hover:bg-gray-400'
+                                            ? 'w-8 bg-gray-900'
+                                            : 'w-1.5 bg-gray-300 hover:bg-gray-400'
                                             }`}
                                         aria-label={`Ir al servicio ${index + 1}`}
                                     />
                                 ))}
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Elemento visual que ocupa todo el alto disponible */}
-                       
+
 
                     </div>
                 </div>

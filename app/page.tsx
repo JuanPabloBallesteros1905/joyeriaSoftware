@@ -8,7 +8,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { Footer } from "@/components/Footer";
 
 
-import { Banner } from "@/components/Banner";
+import { PlansSection } from "@/components/Banner";
 
 export default function Home() {
 
@@ -21,7 +21,7 @@ export default function Home() {
       <HeroSectionJoyeria />
       
       <ServicesSection />
-      <Banner />
+      <PlansSection />
       <Footer />
 
 
