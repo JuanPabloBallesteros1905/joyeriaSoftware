@@ -18,7 +18,7 @@ const services2 = [
     {
         title: "Trabajamos con piedras naturales ",
         subtitle: "Certificadas por laboratorio gemológico ",
-        imagen: "/gemas.jpg",
+        imagen: "/gemas.webp",
         description: "Creamos tus joyas con diamantes, esmeraldas, rubíes y zafiros, bajo fabricación personalizada. Emitimos certificado expedido por laboratorio, detallando pureza, color, talla y quilates de las piedras, con validez internacional.",
         badge: "Certificación GIA",
         feature: "Equipos de última generación",
@@ -30,7 +30,7 @@ const services2 = [
 const services = [
     {
         title: "Taller de Alta Joyería",
-        imagen: "/joyeria.jpg",
+        imagen: "/joyeria.webp",
         subtitle: "Piezas Únicas & Personalizadas",
         description: "Con más de 30 años de experiencia, creamos obras de arte en oro blanco, rosa y amarillo, siempre bajo la máxima calidad, ley 750!",
         badge: "Hecho a mano",
@@ -39,7 +39,7 @@ const services = [
     },
     {
         title: "Grabamos con laser",
-        imagen: "/maarcador.jpg",
+        imagen: "/maarcador.webp",
         subtitle: "Diseño & Previsualización digital",
         description: "Grabar con láser es convertir una joya en un recuerdo eterno. Cada anillo o prenda en oro puede llevar un nombre, una fecha o un mensaje especial con máxima precisión, sin dañar el metal, preservando su brillo y valor para siempre.",
         badge: "Tecnología Inmersiva",
